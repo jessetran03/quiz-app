@@ -72,6 +72,7 @@ function render() {
   else {
     displayQuestions();
   }
+  displayImages();
 }
 
 function displayStart() {
@@ -120,11 +121,19 @@ function submitAnswer() {
   //Checks for right or wrong
   $('main').on('click', `.js-submit-answer`, function(event) {
     event.preventDefault();
+    $('.error').remove();
     const userAnswer = $('input[name=answer]:checked', 'form').val();
     if (userAnswer) {
       showCorrect(userAnswer);
       $('button').replaceWith(
         `<button class="js-next-question">Next</button>`
+      );
+    }
+    else {
+      $('form').prepend(
+        `<div class="error">
+          <p>Please select an option.</p>
+        </div>`
       );
     }
   })
@@ -203,6 +212,14 @@ function resetQuiz() {
     store.questionNumber = 0;
     render();
   })
+}
+
+function displayImages() {
+  $('main').append(
+    `<footer>
+      <img src="volleyball.png">
+    </footer>`
+  )
 }
 
 function handleEvents() {

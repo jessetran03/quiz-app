@@ -58,6 +58,13 @@ section {
   margin: 0;
 }
 
+.error {
+  padding: 10px 25px;
+  margin: 6px 0;
+  border: 1px solid rgb(255, 174, 0);
+  background-color: rgb(250, 243, 220);
+}
+
 .correct {
   padding: 10px 25px;
   margin: 4px 0;
@@ -75,6 +82,18 @@ section {
 button {
   padding: 5px 8px;
   background-color: white;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 30px
+}
+
+img {
+  width: 10%;
+  height: auto;
 }
 
 @media all and (min-width: 800px) {
