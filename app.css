@@ -1,0 +1,93 @@
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #222222;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h1, h2, p, label, button {
+  font-family: Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: 'Comic Sans MS';
+  font-size: 45px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+h2 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+section {
+  margin: 0 100px;
+  padding: 20px;
+}
+
+.start, .questions, .results {
+  margin: 0 40px;
+  padding: 30px;
+  background-color: #ddcfa9fd;
+  border-radius: 10px;
+}
+
+.score {
+  display: flex;
+  flex-direction: row;
+  margin: 0 40px;
+  padding: 0 30px 20px 30px;
+  justify-content: space-between;
+}
+
+.item {
+  margin: 0;
+}
+
+.correct {
+  padding: 10px 25px;
+  margin: 4px 0;
+  border: 1px solid green;
+  background-color: rgb(250, 243, 220);
+}
+
+.incorrect {
+  padding: 10px 25px;
+  margin: 6px 0;
+  border: 1px solid red;
+  background-color: rgb(250, 243, 220);
+}
+
+button {
+  padding: 5px 8px;
+  background-color: white;
+}
+
+@media all and (min-width: 800px) {
+
+  .start, .questions, .results {
+    margin: 0 150px;
+    padding: 40px;
+    background-color: #ddcfa9fd;
+    border-radius: 10px;
+  }
+
+  .score {
+    margin: 0 150px;
+    padding: 0 40px 20px 40px;
+  }
+}
