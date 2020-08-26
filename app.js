@@ -130,7 +130,7 @@ function submitAnswer() {
       );
     }
     else {
-      $('form').prepend(
+      $('form h2').after(
         `<div class="error">
           <p>Please select an option.</p>
         </div>`
@@ -161,11 +161,11 @@ function displayQuestions() {
     </div>
     
     <div class="questions">
-      <div>
-        <h2>${question}</h2>
-      </div>
-      <div>
-        <form>
+      <form>
+        <div>
+          <h2>${question}</h2>
+        </div>
+        <div>
           <div>
             <input name="answer" type="radio" value="${answer[0]}">
             <label for="${answer[0]}">${answer[0]}</label>
@@ -184,8 +184,8 @@ function displayQuestions() {
           </div>
           <br>
           <button class="js-submit-answer">Submit</button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>`
   );
 }
@@ -217,7 +217,7 @@ function resetQuiz() {
 function displayImages() {
   $('main').append(
     `<footer>
-      <img src="volleyball.png">
+      <img src="volleyball.png" alt="volleyball ball">
     </footer>`
   )
 }
